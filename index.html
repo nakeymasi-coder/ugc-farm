@@ -272,7 +272,7 @@ ol.steps li{margin-bottom:7px}
 
         <label>2. Mode</label>
         <select id="in_mode">
-          <option value="">— Pick a mode —</option>
+          <option value="">— Pick a mode —</option><option>None</option>
           <option>Get Ready With Me</option>
           <option>Spend The Day With Me</option>
           <option>Tutorials in general</option>
@@ -292,8 +292,15 @@ ol.steps li{margin-bottom:7px}
 
         <label>3. Product Presentation — one single choice</label>
         <div class="radio-row">
+          <label class="radio-pill"><input type="radio" name="in_pp" value="No product presentation" checked> None - no product presentation</label>
           <label class="radio-pill"><input type="radio" name="in_pp" value="Wearing the product"> Wearing the product</label>
           <label class="radio-pill"><input type="radio" name="in_pp" value="Holding the product"> Holding the product</label>
+          <label class="radio-pill"><input type="radio" name="in_pp" value="Using the product"> Using the product</label>
+          <label class="radio-pill"><input type="radio" name="in_pp" value="Showing the product close to camera"> Showing the product close to camera</label>
+          <label class="radio-pill"><input type="radio" name="in_pp" value="Product beside her in frame"> Product beside her in frame</label>
+          <label class="radio-pill"><input type="radio" name="in_pp" value="Unboxing the product"> Unboxing the product</label>
+          <label class="radio-pill"><input type="radio" name="in_pp" value="Holding the product up by her face"> Holding the product up by her face</label>
+          <label class="radio-pill"><input type="radio" name="in_pp" value="Holding it in some scenes, wearing it in others"> Holding it in some scenes, wearing it in others</label>
         </div>
         <div class="pp-sentence" id="in_pp_sentence">Pick one above — its exact prompt sentence will show here and be saved on the run.</div>
 
@@ -457,7 +464,7 @@ ol.steps li{margin-bottom:7px}
           <label>Locked character (optional for this agent)</label>
           <select class="solo_char" id="s1_char"></select>
           <label>Mode</label>
-          <select id="s1_mode"><option value="">— Pick a mode —</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
+          <select id="s1_mode"><option value="">— Pick a mode —</option><option>None</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
           <label>Topic</label>
           <input type="text" id="s1_topic" placeholder="Topic">
           <label>Length</label>
@@ -482,7 +489,7 @@ ol.steps li{margin-bottom:7px}
           <label>Locked character (optional for this agent)</label>
           <select class="solo_char" id="s2_char"></select>
           <label>Mode</label>
-          <select id="s2_mode"><option value="">— Pick a mode —</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
+          <select id="s2_mode"><option value="">— Pick a mode —</option><option>None</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
           <label>Topic / product type</label>
           <input type="text" id="s2_topic" placeholder="What kind of product should it hunt for?">
           <label>Length</label>
@@ -507,7 +514,7 @@ ol.steps li{margin-bottom:7px}
           <label>Locked character</label>
           <select class="solo_char" id="s3_char"></select>
           <label>Mode</label>
-          <select id="s3_mode"><option value="">— Pick a mode —</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
+          <select id="s3_mode"><option value="">— Pick a mode —</option><option>None</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
           <label>Topic</label>
           <input type="text" id="s3_topic" placeholder="Topic">
           <label>Length</label>
@@ -532,11 +539,18 @@ ol.steps li{margin-bottom:7px}
           <label>Locked character</label>
           <select class="solo_char" id="s4_char"></select>
           <label>Mode</label>
-          <select id="s4_mode"><option value="">— Pick a mode —</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
+          <select id="s4_mode"><option value="">— Pick a mode —</option><option>None</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
           <label>Product Presentation — one single choice</label>
           <div class="radio-row">
+            <label class="radio-pill"><input type="radio" name="s4_pp" value="No product presentation"> None - no product presentation</label>
             <label class="radio-pill"><input type="radio" name="s4_pp" value="Wearing the product"> Wearing the product</label>
             <label class="radio-pill"><input type="radio" name="s4_pp" value="Holding the product"> Holding the product</label>
+            <label class="radio-pill"><input type="radio" name="s4_pp" value="Using the product"> Using the product</label>
+            <label class="radio-pill"><input type="radio" name="s4_pp" value="Showing the product close to camera"> Showing the product close to camera</label>
+            <label class="radio-pill"><input type="radio" name="s4_pp" value="Product beside her in frame"> Product beside her in frame</label>
+            <label class="radio-pill"><input type="radio" name="s4_pp" value="Unboxing the product"> Unboxing the product</label>
+            <label class="radio-pill"><input type="radio" name="s4_pp" value="Holding the product up by her face"> Holding the product up by her face</label>
+            <label class="radio-pill"><input type="radio" name="s4_pp" value="Holding it in some scenes, wearing it in others"> Holding it in some scenes, wearing it in others</label>
           </div>
           <div class="pp-sentence" id="s4_pp_sentence">Pick one — its exact prompt sentence will be used in every scene.</div>
           <label>Topic</label>
@@ -563,11 +577,18 @@ ol.steps li{margin-bottom:7px}
           <label>Locked character</label>
           <select class="solo_char" id="s5_char"></select>
           <label>Mode</label>
-          <select id="s5_mode"><option value="">— Pick a mode —</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
+          <select id="s5_mode"><option value="">— Pick a mode —</option><option>None</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
           <label>Product Presentation — one single choice</label>
           <div class="radio-row">
+            <label class="radio-pill"><input type="radio" name="s5_pp" value="No product presentation"> None - no product presentation</label>
             <label class="radio-pill"><input type="radio" name="s5_pp" value="Wearing the product"> Wearing the product</label>
             <label class="radio-pill"><input type="radio" name="s5_pp" value="Holding the product"> Holding the product</label>
+            <label class="radio-pill"><input type="radio" name="s5_pp" value="Using the product"> Using the product</label>
+            <label class="radio-pill"><input type="radio" name="s5_pp" value="Showing the product close to camera"> Showing the product close to camera</label>
+            <label class="radio-pill"><input type="radio" name="s5_pp" value="Product beside her in frame"> Product beside her in frame</label>
+            <label class="radio-pill"><input type="radio" name="s5_pp" value="Unboxing the product"> Unboxing the product</label>
+            <label class="radio-pill"><input type="radio" name="s5_pp" value="Holding the product up by her face"> Holding the product up by her face</label>
+            <label class="radio-pill"><input type="radio" name="s5_pp" value="Holding it in some scenes, wearing it in others"> Holding it in some scenes, wearing it in others</label>
           </div>
           <div class="pp-sentence" id="s5_pp_sentence">Pick one — its exact prompt sentence will end every scene prompt.</div>
           <label>Topic</label>
@@ -594,7 +615,7 @@ ol.steps li{margin-bottom:7px}
           <label>Locked character (optional for this agent)</label>
           <select class="solo_char" id="s6_char"></select>
           <label>Mode</label>
-          <select id="s6_mode"><option value="">— Pick a mode —</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
+          <select id="s6_mode"><option value="">— Pick a mode —</option><option>None</option><option>Get Ready With Me</option><option>Spend The Day With Me</option><option>Tutorials in general</option><option>Makeup tutorials</option><option>Hair tutorials</option><option>Product reviews</option><option>Cooking videos</option><option>TikTok Shop videos</option><option>Unboxing & first impressions</option><option>Try-on haul</option><option>Before & after transformation</option><option>Morning routine</option><option>Night routine</option><option>Product demo — how it works</option><option>Problem & solution</option><option>Storytime GRWM</option></select>
           <label>Topic</label>
           <input type="text" id="s6_topic" placeholder="Topic">
           <label>Length</label>
@@ -653,7 +674,7 @@ function saveQueue(){ try{ localStorage.setItem(QUEUE_KEY, JSON.stringify(queue)
 function updateQueueCount(){ var q=$('queueCount'); if(q) q.textContent = queue.length ? queue.length : ''; var v=$('vaultCount'); if(v) v.textContent = chars.length ? chars.length : ''; var pr=$('productsCount'); if(pr) pr.textContent = products.length ? products.length : ''; var sc=$('scriptsCount'); if(sc) sc.textContent = scripts.length ? scripts.length : ''; }
 function saveProducts(){ try{ localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products)); }catch(e){} updateQueueCount(); }
 function saveScripts(){ try{ localStorage.setItem(SCRIPTS_KEY, JSON.stringify(scripts)); }catch(e){} updateQueueCount(); }
-function ppSentence(pp){ return pp==='Holding the product' ? 'Holding the product, not wearing it.' : (pp==='Wearing the product' ? 'Wearing the product, not holding it.' : '— no Product Presentation picked —'); }
+function ppSentence(pp){ if(pp==='Holding the product') return 'Holding the product, not wearing it.'; if(pp==='Wearing the product') return 'Wearing the product, not holding it.'; if(pp==='Using the product') return 'Using the product on camera, not just holding it.'; if(pp==='Showing the product close to camera') return 'Showing the product close to camera.'; if(pp==='Product beside her in frame') return 'The product sits beside her in frame - she is not holding it or wearing it.'; if(pp==='Unboxing the product') return 'Unboxing the product on camera.'; if(pp==='Holding the product up by her face') return 'Holding the product up beside her face.'; if(pp==='Holding it in some scenes, wearing it in others') return 'Holding the product in some scenes and wearing it in others - never both in the same shot.'; if(pp==='No product presentation') return 'No presentation line - scene prompts carry no wearing, holding, or using sentence for the product.'; return '— no Product Presentation picked —'; }
 function findChar(id){ for(var i=0;i<chars.length;i++){ if(chars[i].id===id) return chars[i]; } return null; }
 function charLabel(c){ return c ? ('Character '+c.letter+(c.name?' — '+c.name:'')) : 'No character picked'; }
 function nextLetter(){ var used={}; chars.forEach(function(c){ used[String(c.letter||'').toUpperCase()]=1; }); var L='ABCDEFGHIJKLMNOPQRSTUVWXYZ'; for(var i=0;i<L.length;i++){ if(!used[L[i]]) return L[i]; } return String(chars.length+1); }
@@ -774,13 +795,13 @@ function slotLines(c){
 }
 function rulesBlock(pp){
   return [
-    'PRODUCT PRESENTATION — either / or, never both:',
+    'PRODUCT PRESENTATION — one choice per run:',
     '- Choice: '+(pp||'—'),
     '- Exact prompt sentence for every scene: '+ppSentence(pp),
     '- Never wearing an outfit while holding that same outfit on a hanger. Reject and regenerate any image that shows both. If a video needs both, holding first and wearing later, in separate scenes — never the same shot.',
     '',
     'SCENE PROMPT SHAPE — use this and nothing else about her:',
-    'Use the reference images and keep the character perfectly consistent. [Scene action only.] [Spoken line, if any.] '+ppSentence(pp),
+    'Use the reference images and keep the character perfectly consistent. [Scene action only.] [Spoken line, if any.] '+(pp==='No product presentation'?'':ppSentence(pp)),
     'Never describe her in the prompt. No face, hair, skin, body or outfit description. Describing her overrides the references and creates a different girl.',
     '',
     'WORKFLOW RULES:',
